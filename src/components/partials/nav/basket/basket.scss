@@ -1,0 +1,17 @@
+.basket-wrapper {
+  .badge {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    min-width: 18px;
+    color: #fff;
+    top: 14px;
+    right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    border-radius: 5px;
+  }
+}
+

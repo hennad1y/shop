@@ -1,0 +1,16 @@
+{
+  "user": {
+    "name": "User",
+    "credentials": {
+      "buy": true,
+      "edit": false
+    }
+  },
+  "manager": {
+    "name": "Manager",
+    "credentials": {
+      "buy": false,
+      "edit": true
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.card {
+  img{
+    height: 300px;
+    object-fit: contain;
+    background: #000;
+  }
+
+  .margin-right {
+    display: flex;
+    margin: 0 0 0 auto;
+  }
+}
