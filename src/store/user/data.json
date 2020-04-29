@@ -1,5 +1,6 @@
 {
   "user": {
+    "id": 1,
     "name": "User",
     "credentials": {
       "buy": true,
@@ -7,6 +8,7 @@
     }
   },
   "manager": {
+    "id": 2,
     "name": "Manager",
     "credentials": {
       "buy": false,

@@ -3,6 +3,7 @@ import {UserConstants} from "./constants";
 
 export const initUser: IUser = {
     userInfo: {
+        id: 0,
         name: '',
         credentials: {
             buy: false,

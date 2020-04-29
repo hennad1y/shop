@@ -9,6 +9,7 @@ export interface ICredentials {
 }
 
 export interface IUserInfo {
+    readonly id: number | string
     name: string
     credentials: ICredentials
 }

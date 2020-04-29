@@ -11,6 +11,7 @@ const ProductList = () => {
 
     const dispatch = useDispatch();
     const {products, loading, error} = useSelector(({products}: IRootState) => products);
+    const {currentPage, limit} = useSelector(({pagination}: IRootState) => pagination);
 
     useEffect(() => {
         fetchProducts(dispatch)
@@ -27,7 +28,7 @@ const ProductList = () => {
                     <div className="row">
                         {
                             products.length
-                                ? products.map((item) => <div className="col s4" key={item.id}><ProductItem product={item}/></div>)
+                                ? [...products].splice(limit * (currentPage - 1), limit).map((item) => <div className="col s4" key={item.id}><ProductItem product={item}/></div>)
                                 : <div>List empty</div>
                         }
                     </div>

@@ -21,7 +21,7 @@ const fetchUser = (dispatch: Dispatch<UserActions>): void => {
     setTimeout(() => {
         const userRole = getUserRole();
 
-        .92 > Math.random()
+        .99 > Math.random()
             ? dispatch(requestUserSuccess(userRole === 'user' ? data.user : data.manager))
             : dispatch(requestUserError('User not found'));
     }, 700)
