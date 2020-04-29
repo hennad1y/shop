@@ -1,0 +1,7 @@
+#basket-modal {
+  max-width: 320px;
+  
+  @media (min-width: 568px) {
+      max-width: 568px;
+  }
+}
