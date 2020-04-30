@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adc48a80-7247-40cb-93eb-825811f9943b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/partials/modals/basket-modal/table-basket-products/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/partials/modals/basket-modal/table-basket-products/table-basket-products.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/partials/modals/basket-modal/table-basket-products/table-basket-products.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/partials/modals/basket-modal/basket-modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/partials/modals/basket-modal/basket-modal.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/partials/modals/basket-modal/basket-modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/partials/modals/basket-modal/basket-modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/partials/nav/basket/basket.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/partials/nav/basket/basket.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/partials/product-list/product-item/product-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/partials/product-list/product-item/product-item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +31,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/store/basket" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/partials/modals/basket-modal/table-basket-products" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="ts.external.directory.path" value="C:\Основная\2020\shop\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Основная\2020\shop\src\components\partials\modals\basket-modal\table-basket-products" />
       <recent name="C:\Основная\2020\shop\src\store\basket" />
     </key>
   </component>
@@ -53,7 +54,9 @@
       <updated>1587565049311</updated>
       <workItem from="1587565050612" duration="5475000" />
       <workItem from="1587916157707" duration="6477000" />
-      <workItem from="1588142906213" duration="21909000" />
+      <workItem from="1588142906213" duration="22193000" />
+      <workItem from="1588175492953" duration="992000" />
+      <workItem from="1588242900559" duration="259000" />
     </task>
     <servers />
   </component>
@@ -61,9 +64,13 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="656" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1588142981958">
+    <state x="461" y="168" key="SettingsEditor" timestamp="1588175504245">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="656" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1588142981958" />
+    <state x="461" y="168" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1588175504245" />
+    <state x="656" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1588242983146">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="656" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1588242983146" />
   </component>
 </project>
