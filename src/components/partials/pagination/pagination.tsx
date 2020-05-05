@@ -3,22 +3,30 @@ import "./pagination.scss";
 import {useDispatch, useSelector} from "react-redux";
 import {IRootState} from "../../../store";
 import {changeCurrentPage} from "../../../store/pagination/actions";
+import {IProduct} from "../../../store/product/interfaces";
+import {filterFunc} from "../filter/filter";
 
 const Pagination = () => {
     const dispatch = useDispatch();
     const {currentPage, limit} = useSelector(({pagination}: IRootState) => pagination);
     const {products, loading, error} = useSelector(({products}: IRootState) => products);
     const [pages, setPages] = useState<number[]>([]);
+    const [productList, setProductList] = useState<null | IProduct[]>(null);
+    const filter = useSelector(({filter}: IRootState) => filter);
 
     useEffect(() => {
-        if (!products.length) return;
+        setProductList(filterFunc(products, filter))
+    }, [filter, products]);
+
+    useEffect(() => {
+        if (!productList) return;
 
         const allPages = [];
-        const ceilingPages = Math.ceil(products.length / limit);
+        const ceilingPages = Math.ceil(productList.length / limit);
         for (let i = 1; i <= ceilingPages; i++) allPages.push(i);
 
         setPages(allPages);
-    }, [products.length, limit]);
+    }, [productList, limit]);
 
     const setCurrentPage = (e: MouseEvent, page: number) => {
         e.preventDefault();
@@ -34,7 +42,7 @@ const Pagination = () => {
     if (pages && pages.length === 1) return null;
 
     return (
-        <ul className="pagination">
+        <ul className="pagination col s7">
             {
                 pages && (
                     <>

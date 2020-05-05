@@ -9,7 +9,7 @@ const fetchProducts = (dispatch: Dispatch<ProductActions>): void => {
     setTimeout(() => {
         .95 > Math.random()
             ? dispatch(requestProductsSuccess(data))
-            : dispatch(requestProductsError('Something went wrong'));
+            : dispatch(requestProductsError('Something went wrong. Please, reload page'));
     }, 700)
 };
 
