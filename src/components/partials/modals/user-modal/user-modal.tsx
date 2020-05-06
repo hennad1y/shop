@@ -2,9 +2,13 @@ import React, {useEffect, useState} from "react";
 import "./user-modal.scss";
 import {Modal} from "materialize-css";
 import {UserConstants} from "../../../../store/user/constants";
+import {requestUserSuccess} from "../../../../store/user/actions";
+import data from "../../../../store/user/data.json";
+import {useDispatch} from "react-redux";
 
 const UserModal = () => {
 
+    const dispatch = useDispatch();
     const [role, setRole] = useState(sessionStorage.getItem(UserConstants.USER_ROLE));
     const roles = ['user', 'manager'];
 
@@ -23,7 +27,8 @@ const UserModal = () => {
 
         if (role !== currentUser) {
             sessionStorage.setItem(UserConstants.USER_ROLE, role!);
-            setTimeout(() => document.location.reload(),500)
+            setRole(role);
+            dispatch(requestUserSuccess(role === 'user' ? data.user : data.manager))
         }
 
         instance.close();

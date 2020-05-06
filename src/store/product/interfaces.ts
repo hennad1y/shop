@@ -15,6 +15,7 @@ export interface IProduct {
 
 export interface IProducts {
     products: IProduct[],
+    editID?: number | string | null
     loading: boolean,
     error: string
 }

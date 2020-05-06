@@ -6,6 +6,7 @@ import {IRootState} from "../../../../store";
 import {ICredentials} from "../../../../store/user/interfaces";
 import {addItemToBasket} from "../../../../store/basket/actions";
 import {IBasketProduct} from "../../../../store/basket/interfaces";
+import {setEditID} from "../../../../store/product/actions";
 
 const ProductItem: React.FC<{ product: IProduct }> = ({product}) => {
 
@@ -38,6 +39,8 @@ const ProductItem: React.FC<{ product: IProduct }> = ({product}) => {
         dispatch(addItemToBasket(basketProduct))
     };
 
+    const setEditProductID = (id: number | string) => dispatch(setEditID(id));
+
     return (
         <div className="card">
             <div className="card-image">
@@ -63,7 +66,15 @@ const ProductItem: React.FC<{ product: IProduct }> = ({product}) => {
                     )
                 }
                 {
-                    credentials.edit && <button type="button" className="btn btn-small margin-right">Edit</button>
+                    credentials.edit && (
+                        <>
+                            <small>${product.price} Quantity: {product.quantity - quantityInBasket}</small>
+                            <a href="#edit-product-modal" className="btn btn-small right modal-trigger"
+                                onClick={() => setEditProductID(product.id)}>
+                                Edit
+                            </a>
+                        </>
+                    )
                 }
             </div>
         </div>

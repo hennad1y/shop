@@ -27,6 +27,16 @@ export const ProductsReducer = (state: IProducts = initProducts, action: Product
                 loading: false,
                 error: action.payload
             };
+        case ProductConstants.SET_EDIT_ID:
+            return {
+                ...state,
+                editID: action.payload
+            };
+        case ProductConstants.REMOVE_EDIT_ID:
+            return {
+                ...state,
+                editID: null
+            };
         default:
             return state;
     }

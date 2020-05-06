@@ -10,6 +10,7 @@ import Preloader from "../../partials/preloader/preloader";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchUser} from "../../../store/user/async-actions";
 import {IRootState} from "../../../store";
+import EditProductModal from "../../partials/modals/edit-product-modal";
 
 const Shop = () => {
 
@@ -32,6 +33,7 @@ const Shop = () => {
             </div>
             <UserModal />
             <BasketModal />
+            <EditProductModal />
         </div>
     )
 };

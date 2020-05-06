@@ -19,7 +19,7 @@ const Pagination = () => {
     }, [filter, products]);
 
     useEffect(() => {
-        if (!productList) return;
+        if (!productList || !productList.length) return;
 
         const allPages = [];
         const ceilingPages = Math.ceil(productList.length / limit);

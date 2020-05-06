@@ -21,8 +21,8 @@ export const filterFunc = (products: IProduct[], filter: IFilter) => {
     }
 
 
-    filterProducts = filterProducts.filter(item => filter.price.min < item.price);
-    filterProducts = filterProducts.filter(item => filter.price.max > item.price);
+    filterProducts = filterProducts.filter(item => filter.price.min <= item.price);
+    filterProducts = filterProducts.filter(item => filter.price.max >= item.price);
 
     return filterProducts;
 };
